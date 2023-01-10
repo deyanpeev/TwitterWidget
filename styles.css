@@ -1,0 +1,99 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #1da1f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Segoe UI";
+  word-break: break-word;
+  padding: 3.5vh;
+}
+
+#tweets-container div {
+  background-color: white;
+  border-radius: 2vw;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+#tweets-container div span {
+  position: absolute;
+}
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+    font-size: 4vh;
+  }
+
+  #tweets-container {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    margin: 8%;
+  }
+
+  #tweets-container div {
+    margin-bottom: 4%;
+    padding: 3.5vh;
+    width: 100%;
+  }
+
+  #tweets-container div span {
+    width: 95%
+  }
+
+  #tweets-container div:first-child,
+  #tweets-container div:last-child {
+    width: 40%;
+    padding: 3vh;
+    height: 3vw;
+  }
+
+  #tweet {
+    height: 15vw;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: row;
+    font-size: 2.5vh;
+  }
+
+  #tweets-container {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    margin: 8%;
+  }
+
+  #tweets-container div {
+    margin-bottom: 8%;
+    padding: 3vh;
+  }
+
+  #tweets-container div span {
+    width: 85%
+  }
+
+  #tweets-container div:first-child,
+  #tweets-container div:last-child {
+    padding: 3vw;
+    height: 3vh;
+  }
+
+  #tweet {
+    height: 35vh;
+  }
+}
